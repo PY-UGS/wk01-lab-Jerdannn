@@ -1,11 +1,18 @@
-package Lab_1;
+package CSC1009_Lab.Lab_1;
+import java.util.Scanner;
 
 public class Q2B {
     public static void main(String[] args) {
-        System.out.println("Example #3");
-        String moduleCode = "CSC1009";
+        System.out.println("Question 2:");
+        // Creates a new scanner object
+        Scanner input = new Scanner(System.in);
+        System.out.print("Please enter a module code: ");
+        String moduleCode = input.nextLine();
+        // Scanner needs to be closed after
+        // note: this means you cannot use System.in again
+        input.close();
 
-        switch(moduleCode) {
+        switch (moduleCode) {
             case "CSC1006":
                 System.out.println("Mathematics II");
                 break;
@@ -21,7 +28,7 @@ public class Q2B {
             case "CSC1010":
                 System.out.println("Computer Networks");
                 break;
-            //Switch should always have a default case
+            // Note that every switch-case needs a default case
             default:
                 System.out.println("Module code doesn't exist");
                 break;
